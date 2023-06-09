@@ -124,6 +124,7 @@ button:hover {
   transition: border-color 0.3s;
   background-color: var(--background-color);
   font-family: Quicksand, Arial, sans-serif;
+  font-weight: 900;
 }
 
 #input:hover,
@@ -133,6 +134,7 @@ button:hover {
 
 #input::placeholder {
   color: var(--text-color);
+  font-weight: 600;
 }
 
 
