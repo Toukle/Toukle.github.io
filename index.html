@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRKYG2FMYZ"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-VRKYG2FMYZ');</script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
+
+    <title>Toukle</title>
+    <link rel="stylesheet" href="https://toukle.github.io/style.css">
+    <script src="https://toukle.github.io/headscript.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var settingsmenu = document.getElementById('settingsmenu');
+        settingsmenu.style.display = 'none';
+      })
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var appsmenu = document.getElementById('appsmenu');
+        appsmenu.style.display = 'none';
+      })
+
+      window.onload = function() {
+        document.getElementById("searchinput").focus();
+      }
+
+      function changeTheme(theme) {
+        var root = document.documentElement;
+        if (theme === 'green') {
+          root.style.setProperty('--background-color', '#0d1710');
+          root.style.setProperty('--text-color', '#ffffff');
+          root.style.setProperty('--h1234-color', '#ffffff');
+          root.style.setProperty('--custom-link-color', '#33ff33');
+          root.style.setProperty('--button-bgcolor', '#43b731');
+        } else if (theme === 'gray') {
+          root.style.setProperty('--background-color', '#282828');
+          root.style.setProperty('--text-color', '#ffffff');
+          root.style.setProperty('--h1234-color', '#ffffff');
+          root.style.setProperty('--custom-link-color', '#33ff33');
+          root.style.setProperty('--button-bgcolor', '#43b731');
+        } else if (theme === 'light') {
+          root.style.setProperty('--background-color', '#ffffff');
+          root.style.setProperty('--text-color', '#000000');
+          root.style.setProperty('--h1234-color', '#000000');
+          root.style.setProperty('--custom-link-color', '#38761d');
+          root.style.setProperty('--button-bgcolor', '#38761d');
+        }
+      
+        document.cookie = "selectedTheme=" + theme + "; path=/";
+      }
+
+      function checkSavedTheme() {
+        var theme = getCookie("selectedTheme");
+        if (theme) {
+          changeTheme(theme);
+        }
+      }
+
+      function getCookie(cookieName) {
+        var name = cookieName + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var cookieArray = decodedCookie.split(';');
+        for (var i = 0; i < cookieArray.length; i++) {
+          var cookie = cookieArray[i];
+          while (cookie.charAt(0) === ' ') {
+            cookie = cookie.substring(1);
+          }
+          if (cookie.indexOf(name) === 0) {
+            return cookie.substring(name.length, cookie.length);
+          }
+        }
+        return null;
+      } 
+
+      checkSavedTheme();
+    </script>
+
+    <style>
+      .material-symbols-outlined {
+        cursor: pointer;
+        user-select: none;
+        position: absolute;
+        font-size: 3em;
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 700,
+        'GRAD' 0,
+        'opsz' 48
+      }
+
+      .over-button {
+        position: absolute;
+        left: 20px;
+        top: 15px;
+        font-size: 1.1em;
+      }
+
+      .owner-button {
+        position: absolute;
+        left: 70px;
+        top: 15px;
+        font-size: 1.1em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="zoekterm-en-knop">
+      <img style="border-radius: 25px; margin-top: 120px; margin-bottom: 0px; width: 362px;" class="img" src="https://toukle.github.io/assets/Toukle Tekst Transparant -kwal.png">
+      <br><input type="text" id="searchinput" placeholder="Zoekterm...">
+      <button onclick="search()">Zoeken</button>
+    </div>
+
+    <a class="over-button" href="https://toukle.github.io/over">Over</a>
+    <a class="owner-button" href="https://tcevik.github.io">Ga naar TC_tam Site</a>
+    <span id="settings" class="material-symbols-outlined">settings</span>
+    <span id="apps" class="material-symbols-outlined">apps</span>
+
+    <div style="border-radius: 25px;" id="appsmenu">
+      <h3>Apps:</h3>
+      <ul>
+        <li><button onclick="window.location.href='https://tcevik.github.io/'" style="margin: 0%;">TC_tam Website</button></li>
+        <li><button onclick="window.location.href='https://toukle.github.io/picto-planner/'" style="margin: 0%;">Toukle Picto Planner</button></li>
+        <li><button onclick="window.location.href='https://toukle.github.io/picto-planner/time-timer/'" style="margin: 0%;">Toukle Timer</button></li>
+      </ul>
+    </div>
+  
+    <div style="border-radius: 25px;" id="settingsmenu">
+      <h3>Instellingen:</h3>
+      <ul>
+        <li><div class="color-option" style="border-color: var(--text-color); background-color: #0d1710;" onclick="changeTheme('green')"></div>Heel Donkergroen</li>
+        <li><div class="color-option" style="border-color: var(--text-color); background-color: #282828;" onclick="changeTheme('gray')"></div>Donkergrijs</li>
+        <li><div class="color-option" style="border-color: var(--text-color); background-color: #ffffff;" onclick="changeTheme('light')"></div>Puur Wit</li>
+      </ul>
+    </div>
+
+    <script src="https://toukle.github.io/bodyscript.js"></script>
+
+  </body>
+</html>
