@@ -1,5 +1,5 @@
 function search() {
-  var searchInput = document.getElementById("searchinput").value;
+  var searchInput = document.getElementById("input").value;
   
   if (searchInput.trim() === "") {
     return;
@@ -20,7 +20,7 @@ function handleKeyDown(event) {
   }
 }
 
-var inputField = document.getElementById("searchinput");
+var inputField = document.getElementById("input");
 inputField.addEventListener("keydown", handleKeyDown);
 
 document.getElementById('settings').addEventListener('click', function(event) {
