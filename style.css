@@ -161,7 +161,7 @@ button:hover {
   border: 2px solid var(--text-color);
   background-color: var(--background-color);
   padding: 20px;
-  display: block;
+  display: none;
   z-index: 9999;
 }
 
@@ -189,7 +189,7 @@ button:hover {
   border: 2px solid var(--text-color);
   background-color: var(--background-color);
   padding: 20px;
-  display: block;
+  display: none;
   z-index: 9999;
 }
 
