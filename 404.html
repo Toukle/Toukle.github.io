@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRKYG2FMYZ"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-VRKYG2FMYZ');</script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <title>WHOAH</title>
+    <link rel="stylesheet" href="https://toukle.github.io/style.css">
+    <script src="https://toukle.github.io/headscript.js"></script>
+  <style>
+    #countdown {
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+  </style>
+  </head>
+  <body>
+    <script>
+      var secondsLeft = 10;
+      function countdown() {
+          var countdownElement = document.getElementById("countdown");
+          countdownElement.innerText = secondsLeft;
+          if (secondsLeft > 0) {
+              secondsLeft--;
+              setTimeout(countdown, 1000);
+          } else {
+              window.location.href = '/';
+          }
+      }
+      window.onload = countdown;
+    </script>
+
+    <img style="position: absolute; top: 10px; left: 10px; border-radius: 25px; margin-top: 20px; margin-bottom: 0px; width: 150px;" class="img" src="https://toukle.github.io/assets/Toukle Tekst Transparant.png" alt="Toukle">
+
+    <h1>Klein probleem...</h1>
+    <h3>Oh nee, de pagina die je probeert te bereiken neemt niet op! Je kunt het later nog eens proberen of de link te checken.</h3>
+    <h3>Je wordt over <span id="countdown">10</span> seconden automatisch doorverwezen naar de homepagina.</h3>
+
+    <button onclick="window.location.href='/'">Naar Toukle</button>
+  <script src="https://toukle.github.io/bodyscript.js"></script>
+  </body>
+</html>
