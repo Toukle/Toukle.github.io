@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" style="--time: 300;" data-lt-installed="true">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRKYG2FMYZ"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-VRKYG2FMYZ');</script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
+
+    <title>Toukle Time Timer</title>
+    <link rel="stylesheet" href="https://toukle.github.io/style.css">
+    <link rel="stylesheet" href="https://toukle.github.io/time-timer/style.css">
+  </head>
+  <body class="timer-paused">
+    <div class="timer-container">
+      <div class="timer">
+        <button type="button" class="timer-button" aria-label="Start/Stop"></button>
+        <div class="hand"></div>
+        <div class="sizer"></div>
+        <ul class="subdivisions">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+
+    <form style="text-align: center; align-content: center;" class="input-group">
+      <label for="time">Hoeveel minuten moet de timer duren?</label>
+      <input type="number" id="time" value="10" name="time" min="1" max="60" oninput="validateMinutes()">
+      <input type="submit" value="Start">
+    </form>
+
+    <script>
+      function validateMinutes() {
+        var timeInput = document.getElementById("time");
+        var minutes = parseInt(timeInput.value);
+        
+        if (isNaN(minutes) || minutes < 1 || minutes > 60) {
+          timeInput.setCustomValidity("Minuten moeten tussen 1 en 60 liggen.");
+        } else {
+          timeInput.setCustomValidity("");
+        }
+      }
+    </script>
+
+    <audio class="ding" src="https://toukle.github.io/time-timer/time-timer-sound.wav" preload="auto"></audio>
+
+    <script src="https://toukle.github.io/time-timer/bodyscript.js"></script>
+    <script src="https://toukle.github.io/script.js"></script>
+  </body>
+</html>
