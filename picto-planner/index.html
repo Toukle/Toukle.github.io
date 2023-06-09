@@ -97,6 +97,18 @@
         cursor: move;
       }
     </style>
+    <script>
+      // Voorkom dat het apparaat in slaapstand gaat
+      function preventSleep() {
+        if (typeof window.plugins !== "undefined" && typeof window.plugins.insomnia !== "undefined") {
+          window.plugins.insomnia.keepAwake();
+        } else {
+          // Gebruik een andere methode om slaapstand te voorkomen (indien nodig)
+        }
+      }
+      
+      preventSleep();
+    </script>
   </head>
   <body>
     <div class="container">
