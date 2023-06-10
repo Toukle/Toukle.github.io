@@ -70,7 +70,6 @@ function startSpeechRecognition() {
   button.innerHTML = "Aan het luisteren...";
 
   const recognition = new webkitSpeechRecognition();
-  recognition.lang = 'nl-NL';
   recognition.start();
   googleaudio.play();
 
