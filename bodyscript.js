@@ -71,5 +71,9 @@ function startSpeechRecognition() {
   recognition.onresult = function(event) {
     const result = event.results[0][0].transcript;
     setInputText(result);
+    
+    if (!result) {
+      search();
+    }
   }
 }
