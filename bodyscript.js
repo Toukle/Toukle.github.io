@@ -81,7 +81,6 @@ function startSpeechRecognition() {
   }
 
   recognition.onend = function() {
-    micImage.src = "https://toukle.github.io/assets/mic.svg";
   }
 }
 
