@@ -1,3 +1,6 @@
+var newTabOpened = false;
+var timer;
+
 function search() {
   var searchInput = document.getElementById("input").value;
   
@@ -7,11 +10,24 @@ function search() {
   
   var searchURL = "https://www.google.com/search?q=" + encodeURIComponent(searchInput);
   openInNewTab(searchURL);
+  
+  // Start de timer van 0,5 seconden
+  timer = setTimeout(function() {
+    if (!newTabOpened) {
+      replaceTab(searchURL);
+    }
+  }, 500);
 }
 
 function openInNewTab(url) {
+  newTabOpened = true; // Markeer dat er een nieuw tabblad is geopend
   var newTab = window.open(url, "_blank");
   newTab.focus();
+}
+
+function replaceTab(url) {
+  clearTimeout(timer);
+  window.location.replace(url);
 }
 
 function handleKeyDown(event) {
