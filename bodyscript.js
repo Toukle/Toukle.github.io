@@ -10,7 +10,7 @@ function search() {
 }
 
 function openInNewTab(url) {
-  var newTab = window.open(url, "_blank");
+  var newTab = window.open(url);
   newTab.focus();
 }
 
