@@ -67,7 +67,6 @@ function setInputText(text) {
 function startSpeechRecognition() {
   var googleaudio = new Audio('assets/google-now-voice.mp3');
   var button = document.getElementById("speech-button");
-  button.innerHTML = "Aan het luisteren...";
 
   const recognition = new webkitSpeechRecognition();
   recognition.start();
@@ -78,9 +77,5 @@ function startSpeechRecognition() {
     if (result.trim() !== '') {
       setInputText(result);
     }
-  }
-
-  recognition.onend = function() {
-    button.innerHTML = "Spraakgestuurd Zoeken";
   }
 }
