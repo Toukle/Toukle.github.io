@@ -65,15 +65,14 @@ function setInputText(text) {
 }
 
 function startSpeechRecognition() {
+  var googleaudio = new Audio('assets/google-now-voice.mp3');
   var button = document.getElementById("speech-button");
   button.innerHTML = "Aan het luisteren...";
-
-  var googleaudio = new Audio('assets/google-now-voice.mp3');
-  googleaudio.play();
 
   const recognition = new webkitSpeechRecognition();
   recognition.lang = 'nl-NL';
   recognition.start();
+  googleaudio.play();
 
   recognition.onresult = function(event) {
     const result = event.results[0][0].transcript;
