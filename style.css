@@ -220,6 +220,7 @@ button:hover {
 .color-option {
   width: 20px;
   height: 20px;
+  border-radius: 50%;
   border: 2px solid var(--text-color);
   display: inline-block;
   margin-right: 5px;
