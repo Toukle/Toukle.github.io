@@ -110,6 +110,21 @@
         top: 15px;
         font-size: 1.1em;
       }
+
+      .gif-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://storage.googleapis.com/support-kms-prod/yQaqmZKczQG1vU5R8W3Lk5NROfCyU71FHdcm") center/cover fixed no-repeat;
+        z-index: 9999;
+      }
+    
+      .gif {
+        border-radius: 25px;
+      }
     </style>
   </head>
 
@@ -119,6 +134,10 @@
       <br><input type="text" id="input" placeholder="Zoekterm...">
       <button onclick="search()">Zoeken</button>
       <button onclick="startSpeechRecognition()">Spraakgestuurd Zoeken</button>
+    </div>
+
+    <div class="gif-container" id="gifContainer">
+      <img class="gif" src="https://storage.googleapis.com/support-kms-prod/yQaqmZKczQG1vU5R8W3Lk5NROfCyU71FHdcm">
     </div>
 
     <a class="over-button" href="https://toukle.github.io/overig/over">Over</a>
