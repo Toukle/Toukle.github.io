@@ -123,6 +123,7 @@
       </div>
       <br>
       <button style="margin-top: -30px;" search()">Toukle Zoeken</button>
+      <button onclick="openRandomDomain()">Ik doe een gok</button>
     </div>
 
     <a class="over-button" href="https://toukle.github.io/overig/over">Over</a>
@@ -151,5 +152,20 @@
 
     <script src="https://toukle.github.io/bodyscript.js"></script>
 
+    <script>
+      function openRandomDomain() {
+        var domains = [
+          "https://youtube.com",
+          "https://boredbutton.com",
+          "https://www.google.com/doodles",
+          "https://www.sudokuonline.nl/"
+        ];
+
+        var randomIndex = Math.floor(Math.random() * domains.length);
+        var randomDomain = domains[randomIndex];
+
+        window.location.href = randomDomain;
+      }
+    </script>
   </body>
 </html>
