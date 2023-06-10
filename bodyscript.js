@@ -61,7 +61,7 @@ document.addEventListener('click', function(event) {
 
 function setInputText(text) {
   document.getElementById("input").value = text;
-  search(); // Voer de zoekfunctie uit
+  search();
 }
 
 function startSpeechRecognition() {
