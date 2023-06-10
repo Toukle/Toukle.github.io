@@ -65,8 +65,12 @@ function setInputText(text) {
 }
 
 function startSpeechRecognition() {
+  var button = document.getElementById("speech-button");
+  button.innerHTML = "Aan het luisteren...";
+
   var googleaudio = new Audio('assets/google-now-voice.mp3');
   googleaudio.play();
+
   const recognition = new webkitSpeechRecognition();
   recognition.lang = 'nl-NL';
   recognition.start();
@@ -76,5 +80,9 @@ function startSpeechRecognition() {
     if (result.trim() !== '') {
       setInputText(result);
     }
+  }
+
+  recognition.onend = function() {
+    button.innerHTML = "Spraakgestuurd Zoeken";
   }
 }
