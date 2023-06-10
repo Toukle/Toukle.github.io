@@ -62,13 +62,14 @@ document.addEventListener('click', function(event) {
 function setInputText(text) {
   document.getElementById("input").value = text;
 }
+
 function startSpeechRecognition() {
   const recognition = new webkitSpeechRecognition();
   recognition.lang = 'nl-NL';
+  recognition.start();
+
   recognition.onresult = function(event) {
     const result = event.results[0][0].transcript;
     setInputText(result);
   }
-  document.getElementById("gifContainer").style.display = "flex";
-  document.body.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
 }
