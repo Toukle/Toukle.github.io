@@ -61,6 +61,7 @@ document.addEventListener('click', function(event) {
 
 function setInputText(text) {
   document.getElementById("input").value = text;
+  var micImage = document.getElementById("mic-image");
   micImage.src = "https://toukle.github.io/assets/mic.svg";
   search();
 }
