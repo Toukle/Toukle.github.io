@@ -61,6 +61,7 @@ document.addEventListener('click', function(event) {
 
 function setInputText(text) {
   document.getElementById("input").value = text;
+  micImage.src = "https://toukle.github.io/assets/mic.svg";
   search();
 }
 
@@ -81,7 +82,7 @@ function startSpeechRecognition() {
   }
 
   recognition.onend = function() {
-    
+
   }
 }
 
