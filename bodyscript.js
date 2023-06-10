@@ -81,6 +81,7 @@ function startSpeechRecognition() {
   }
 
   recognition.onend = function() {
+    
   }
 }
 
