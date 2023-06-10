@@ -99,7 +99,7 @@ button {
   padding: var(--button-padding);
   font-size: var(--font-size);
   margin: 0.3%;
-  transition: transform 0.3s, border-radius 0.3s, border-color 0.3s;
+  transition: transform 0.3s, border-radius 0.75s, border-color 0.3s;
   transform-origin: center;
   z-index: 1;
 }
