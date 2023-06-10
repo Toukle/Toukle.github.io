@@ -61,6 +61,7 @@ document.addEventListener('click', function(event) {
 
 function setInputText(text) {
   document.getElementById("input").value = text;
+  search(); // Voer de zoekfunctie uit
 }
 
 function startSpeechRecognition() {
@@ -70,10 +71,8 @@ function startSpeechRecognition() {
 
   recognition.onresult = function(event) {
     const result = event.results[0][0].transcript;
-    setInputText(result);
-    
-    if (!result) {
-      search();
+    if (result.trim() !== '') {
+      setInputText(result);
     }
   }
 }
