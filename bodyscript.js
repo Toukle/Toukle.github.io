@@ -65,6 +65,8 @@ function setInputText(text) {
 }
 
 function startSpeechRecognition() {
+  var googleaudio = new Audio('assets/google-now-voice.mp3');
+  googleaudio.play();
   const recognition = new webkitSpeechRecognition();
   recognition.lang = 'nl-NL';
   recognition.start();
