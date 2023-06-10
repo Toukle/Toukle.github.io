@@ -133,7 +133,7 @@
     <span id="apps" class="material-symbols-outlined">apps</span>
 
     <div style="border-radius: 25px;" id="appsmenu">
-      <h3>Apps:</h3>
+      <h3 style="margin-top: -20;">Apps:</h3>
       <ul>
         <li><button onclick="window.location.href='https://tcevik.github.io/'" style="margin: 0%;">TC_tam Website</button></li>
         <li><button onclick="window.location.href='https://toukle.github.io/picto-planner/'" style="margin: 0%;">Toukle Picto Planner</button></li>
@@ -143,7 +143,7 @@
     </div>
   
     <div style="border-radius: 25px;" id="settingsmenu">
-      <h3>Instellingen:</h3>
+      <h3 style="margin-top: -20;">Instellingen:</h3>
       <ul>
         <li><div class="color-option" style="border-color: var(--text-color); background-color: #0d1710;" onclick="changeTheme('green')"></div>Heel Donkergroen</li>
         <li><div class="color-option" style="border-color: var(--text-color); background-color: #282828;" onclick="changeTheme('gray')"></div>Donkergrijs</li>
@@ -170,29 +170,29 @@
 
       function search() {
         var searchInput = document.getElementById("input").value;
-            
+
         if (searchInput.trim() === "") {
           return;
         }
-        
+
         var searchURL = "https://www.google.com/search?q=" + encodeURIComponent(searchInput);
         openInNewTab(searchURL);
       }
-      
+
       function openInNewTab(url) {
         var newTab = window.open(url);
         newTab.focus();
       }
-      
+
       function handleKeyDown(event) {
         if (event.keyCode === 13) {
           search();
         }
       }
-      
+
       var inputField = document.getElementById("input");
       inputField.addEventListener("keydown", handleKeyDown);
-      
+
       document.getElementById('settings').addEventListener('click', function(event) {
         var settingsmenu = document.getElementById('settingsmenu');
         if (settingsmenu.style.display === 'none') {
@@ -202,7 +202,7 @@
         }
         event.stopPropagation();
       });
-      
+
       document.addEventListener('click', function(event) {
         var settingsmenu = document.getElementById('settingsmenu');
         var isClickInsideMenu = settingsmenu.contains(event.target);
@@ -210,7 +210,7 @@
           settingsmenu.style.display = 'none';
         }
       });
-      
+
       document.getElementById('apps').addEventListener('click', function(event) {
         var appsmenu = document.getElementById('appsmenu');
         if (appsmenu.style.display === 'none') {
@@ -220,7 +220,7 @@
         }
         event.stopPropagation();
       });
-      
+
       document.addEventListener('click', function(event) {
         var appsmenu = document.getElementById('appsmenu');
         var isClickInsideappsmenu = appsmenu.contains(event.target);
@@ -228,14 +228,14 @@
           appsmenu.style.display = 'none';
         }
       });
-      
+
       function setInputText(text) {
         document.getElementById("input").value = text;
         var micImage = document.getElementById("mic-image");
         micImage.src = "https://toukle.github.io/assets/mic.svg";
         search();
       }
-      
+
       function startSpeechRecognition() {
         var googleaudio = new Audio('assets/google-now-voice.mp3');
         var micImage = document.getElementById("mic-image");
