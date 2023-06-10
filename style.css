@@ -26,6 +26,7 @@ body {
   text-align: center;
   overflow-x: hidden;
   transition: 0.5s;
+  user-select: none;
 }
 
 
