@@ -66,7 +66,8 @@ function setInputText(text) {
 
 function startSpeechRecognition() {
   var googleaudio = new Audio('assets/google-now-voice.mp3');
-  var button = document.getElementById("speech-button");
+  var micImage = document.getElementById("mic-image");
+  micImage.src = "https://toukle.github.io/assets/mic-on.svg";
 
   const recognition = new webkitSpeechRecognition();
   recognition.start();
@@ -78,4 +79,9 @@ function startSpeechRecognition() {
       setInputText(result);
     }
   }
+
+  recognition.onend = function() {
+    micImage.src = "https://toukle.github.io/assets/mic.svg";
+  }
 }
+
