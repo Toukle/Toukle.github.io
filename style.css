@@ -166,6 +166,8 @@ button:hover {
 
 #appsmenu {
   position: absolute;
+  overflow-y: auto;
+  height: 90%;
   right: 10px;
   top: 10px;
   width: 200px;
