@@ -155,6 +155,7 @@
         border: 2px solid var(--text-color);
         background-color: var(--background-color);
         padding: 20px;
+        display: none;
         z-index: 9999;
       }
 
@@ -215,7 +216,7 @@
   </head>
 
   <body>
-    <div style="display: none;" class="zoekterm-en-knop">
+    <div class="zoekterm-en-knop">
       <p style="margin-top: 120px; margin-bottom: -50px; font-size: 104px;"><span style="color: #43b731;">T</span><span
           style="color: #31B6FF;">o</span><span style="color: #FF3131;">u</span><span style="color: #FAD027;">k</span><span
           style="color: #43b731;">l</span><span style="color: #31B6FF;">e</span></p>
@@ -230,12 +231,10 @@
       <button onclick="openRandomDomain()">Ik doe een gok</button>
     </div>
 
-    <div style="display: none;" id="links-buttons">
-      <a class="over-button" href="https://toukle.github.io/overig/over">Over</a>
-      <a class="yt-button" href="https://www.youtube.com/@Tamer_Cevik">TC_tam YouTube</a>
-      <span id="settings" class="material-symbols-outlined">settings</span>
-      <span id="apps" class="material-symbols-outlined">apps</span>
-    </div>
+    <a class="over-button" href="https://toukle.github.io/overig/over">Over</a>
+    <a class="yt-button" href="https://www.youtube.com/@Tamer_Cevik">TC_tam YouTube</a>
+    <span id="settings" class="material-symbols-outlined">settings</span>
+    <span id="apps" class="material-symbols-outlined">apps</span>
 
     <div id="appsmenu">
       <h3>Apps:</h3>
@@ -264,8 +263,8 @@
 
     <script>
       window.onload = function() {
-        var settings = document.getElementById("links-buttons");
-        var search = document.getElementById("zoekterm-en-knop");
+        var settings = document.getElementById("settings");
+        var apps = document.getElementById("apps");
         settings.style.opacity = 0;
         apps.style.opacity = 0;
             
@@ -284,7 +283,6 @@
       
         fadeIn(settings);
         fadeIn(apps);
-        fadeIn(search);
       };
 
       function openRandomDomain() {
