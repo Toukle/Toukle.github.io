@@ -215,7 +215,7 @@
     </style>
   </head>
 
-  <body id="body">
+  <body>
     <div class="zoekterm-en-knop">
       <p style="margin-top: 120px; margin-bottom: -50px; font-size: 104px;"><span style="color: #43b731;">T</span><span
           style="color: #31B6FF;">o</span><span style="color: #FF3131;">u</span><span style="color: #FAD027;">k</span><span
@@ -263,10 +263,11 @@
 
     <script>
       window.onload = function() {
-        var body = document.getElementById("body");
+        var settings = document.getElementById("settings");
+        var apps = document.getElementById("apps");
         settings.style.opacity = 0;
         apps.style.opacity = 0;
-
+            
         var fadeIn = function(element) {
           var op = 0;
           element.style.display = "block";
@@ -280,7 +281,8 @@
           }, 50);
         };
       
-        fadeIn(body);
+        fadeIn(settings);
+        fadeIn(apps);
       };
 
       function openRandomDomain() {
