@@ -134,7 +134,7 @@
       <br>
       <div style="position: relative;">
         <input type="text" id="input" placeholder="Zoekterm..." style="width: 60%;">
-        <img id="mic-image" src="https://toukle.github.io/assets/mic.svg" onclick="startSpeechRecognition()" style="cursor: pointer; z-index: 9999; position: absolute; width: 40px; height: 40px; top: 50%; right: 20%; background-color: var(--background-color); border-radius: 10px; transform: translateY(-50%);">
+        <img id="mic-image" src="https://www.vhv.rs/dpng/d/144-1448006_microphone-icon-logo-design-mic-symbol-music-mic.png" onclick="startSpeechRecognition()" style="cursor: pointer; z-index: 9999; position: absolute; width: 40px; height: 40px; top: 50%; right: 20%; background-color: var(--background-color); border-radius: 10px; transform: translateY(-50%);">
       </div>
       <br>
       <button style="margin-top: -30px;" search()">Toukle Zoeken</button>
@@ -518,15 +518,11 @@
 
       function setInputText(text) {
         document.getElementById("input").value = text;
-        var micImage = document.getElementById("mic-image");
-        micImage.src = "https://toukle.github.io/assets/mic.svg";
         search();
       }
 
       function startSpeechRecognition() {
         var googleaudio = new Audio('assets/google-now-voice.mp3');
-        var micImage = document.getElementById("mic-image");
-        micImage.src = "https://toukle.github.io/assets/mic-on.svg";
       
         const recognition = new webkitSpeechRecognition();
         recognition.start();
