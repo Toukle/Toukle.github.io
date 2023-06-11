@@ -489,12 +489,7 @@
         }
 
         var searchURL = "https://www.perplexity.ai/search?q=" + encodeURIComponent(searchInput);
-        openInAi(searchURL);
-      }
-
-      function openInAi(url) {
-        var newTab = window.open(url);
-        newTab.focus();
+        openInNewTab(searchURL);
       }
 
       function handleKeyDown(event) {
