@@ -128,6 +128,16 @@
       .square-button50:hover {
         margin: 5px;
       }
+
+      .app-columns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .app-column {
+        flex: 1;
+      }
     </style>
   </head>
 
@@ -152,13 +162,17 @@
 
     <div id="appsmenu">
       <h3>Apps:</h3>
-      <ul>
-        <li><button class="square-button50" onclick="window.location.href='https://tcevik.github.io/';" style="background-image: url('https://tcevik.github.io/favicon.ico');"></button></li>
-        <li><button class="square-button50" onclick="window.location.href='https://toukle.github.io/picto-planner/';" style="background-image: url('https://www.sclera.be/resources/pictos/pictogrammen.png');"></button></li>
-        <li><button class="square-button50" onclick="window.location.href='https://toukle.github.io/time-timer/';" style="background-image: url('https://www.sclera.be/resources/pictos/time%20timer.png');"></button></li>
-        <li><button class="square-button50" onclick="window.location.href='https://toukle.github.io/overig/toukle-ads';" style="background-image: url('assets/Toukle ADS.png');"></button></li>
-      </ul>
-    </div>
+      <div class="app-columns">
+        <ul class="app-column">
+          <li><button class="square-button50" onclick="window.location.href='https://tcevik.github.io/';" style="background-image: url('https://tcevik.github.io/favicon.ico');"></button></li>
+          <li><button class="square-button50" onclick="window.location.href='https://toukle.github.io/picto-planner/';" style="background-image: url('https://www.sclera.be/resources/pictos/pictogrammen.png');"></button></li>
+        </ul>
+        <ul class="app-column">
+          <li><button class="square-button50" onclick="window.location.href='https://toukle.github.io/time-timer/';" style="background-image: url('https://www.sclera.be/resources/pictos/time%20timer.png');"></button></li>
+          <li><button class="square-button50" onclick="window.location.href='https://toukle.github.io/overig/toukle-ads';" style="background-image: url('assets/Toukle ADS.png');"></button></li>
+        </ul>
+      </div>
+    </div>    
   
     <div style="border-radius: 25px;" id="settingsmenu">
       <h3>Instellingen:</h3>
