@@ -267,8 +267,9 @@
         var apps = document.getElementById("apps");
         settings.style.opacity = 0;
         apps.style.opacity = 0;
+            
         var fadeIn = function(element) {
-          var op = 0.1;
+          var op = 0;
           element.style.display = "block";
           var timer = setInterval(function() {
             if (op >= 1) {
@@ -276,9 +277,10 @@
             }
             element.style.opacity = op;
             element.style.filter = "alpha(opacity=" + op * 100 + ")";
-            op += op * 0.1;
+            op += 0.1;
           }, 50);
         };
+      
         fadeIn(settings);
         fadeIn(apps);
       };
