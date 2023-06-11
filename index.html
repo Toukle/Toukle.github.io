@@ -84,6 +84,7 @@
       .material-symbols-outlined {
         cursor: pointer;
         user-select: none;
+        display: none;
         position: absolute;
         font-size: 3em;
         font-variation-settings:
@@ -261,6 +262,27 @@
     <script src="https://toukle.github.io/bodyscript.js"></script>
 
     <script>
+      window.onload = function() {
+        var settings = document.getElementById("settings");
+        var apps = document.getElementById("apps");
+        settings.style.opacity = 0;
+        apps.style.opacity = 0;
+        var fadeIn = function(element) {
+          var op = 0.1;
+          element.style.display = "block";
+          var timer = setInterval(function() {
+            if (op >= 1) {
+              clearInterval(timer);
+            }
+            element.style.opacity = op;
+            element.style.filter = "alpha(opacity=" + op * 100 + ")";
+            op += op * 0.1;
+          }, 50);
+        };
+        fadeIn(settings);
+        fadeIn(apps);
+      };
+
       function openRandomDomain() {
         var domains = [
           "https://boredbutton.com/",
