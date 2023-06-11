@@ -144,6 +144,7 @@
       </div>
       <br>
       <button style="margin-top: -30px;" search()">Toukle Zoeken</button>
+      <button style="margin-top: -30px;" searchAi()">AI Zoeken</button>
       <button onclick="openRandomDomain()">Ik doe een gok</button>
     </div>
 
@@ -476,6 +477,22 @@
       }
 
       function openInNewTab(url) {
+        var newTab = window.open(url);
+        newTab.focus();
+      }
+
+      function searchAi() {
+        var searchInput = document.getElementById("input").value;
+
+        if (searchInput.trim() === "") {
+          return;
+        }
+
+        var searchURL = "https://www.perplexity.ai/search?q=" + encodeURIComponent(searchInput);
+        openInAi(searchURL);
+      }
+
+      function openInAi(url) {
         var newTab = window.open(url);
         newTab.focus();
       }
