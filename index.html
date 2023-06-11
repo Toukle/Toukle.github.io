@@ -263,11 +263,10 @@
 
     <script>
       window.onload = function() {
-        var settings = document.getElementById("settings");
-        var apps = document.getElementById("apps");
+        var body = document.getElementById("body");
         settings.style.opacity = 0;
         apps.style.opacity = 0;
-            
+
         var fadeIn = function(element) {
           var op = 0;
           element.style.display = "block";
@@ -281,8 +280,7 @@
           }, 50);
         };
       
-        fadeIn(settings);
-        fadeIn(apps);
+        fadeIn(body);
       };
 
       function openRandomDomain() {
